@@ -8,6 +8,18 @@ public class Main {
 
     // set up the scanner so that it separates words based on space and punctuation
     final Scanner input = new Scanner(System.in).useDelimiter("[^\\p{Alnum}]+");
+    final WordCounter wordCounter = new WordCounter(new HashMap<>());
+    wordCounter.countWords(input);
+    final Map<String, Integer> countsMap = wordCounter.getCounts();
+    final int mapSize = countsMap.size();
+    final List<Map.Entry<String, Integer>> entryList = new ArrayList<>(mapSize);
+    entryList.addAll(countsMap.entrySet());
+    entryList.sort(new DescendingByCount());
+    for (int i = 0; i < 10; i++){
+        System.out.println(entryList.get(i).toString());
+
+    }
+
 
 
     // TODO complete this main program
