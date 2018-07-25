@@ -41,7 +41,7 @@ public class WordCounter {
   public int getCount(final String word) {
 
     // TODO, Done
-    return theMap.get(word);
+    return theMap.get(word) == null ? -1 : theMap.get(word);
 
   }
 
