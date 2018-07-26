@@ -21,4 +21,4 @@
       - It allows you to pass any object that implements the iterator interface.
    - What crucial role does the Iterator abstraction play in making `WordCounter` testable?
    
-      - 
+      - It allows you to provide any object that implements the iterator interface. 
