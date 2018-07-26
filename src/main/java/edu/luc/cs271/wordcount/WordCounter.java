@@ -1,7 +1,6 @@
 package edu.luc.cs271.wordcount;
 
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -16,13 +15,11 @@ public class WordCounter {
 
     // TODO Done
     this.theMap = theMap;
-
-
   }
 
   /** Counts the frequencies of all words in the given iterator. */
   public void countWords(final Iterator<String> words) {
-    while (words.hasNext()){
+    while (words.hasNext()) {
       String word = words.next();
 
       if (theMap.containsKey(word)) {
@@ -42,7 +39,6 @@ public class WordCounter {
 
     // TODO, Done
     return theMap.get(word) == null ? -1 : theMap.get(word);
-
   }
 
   /** Retrieve the map representing all word frequencies. */
